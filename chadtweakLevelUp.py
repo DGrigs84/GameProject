@@ -11,13 +11,13 @@ hInt = 0
 
 # While loop used to increase player's level
 # should 14 be an if statement?
-while hero_xp >= hero_lvlnext: 
+if hero_xp >= hero_lvlnext: 
     hero_lvl += 1   # Hero's level +1
     hero_xp = hero_xp - hero_lvlnext # Most likely xp will surpass required xp 
     hero_lvlnext = round(hero_lvlnext*1.6) # Will take herolvlnext variable, multiply it by 1.6, and round it if there's a decimal.
-
-if hero_xp < hero_lvlnext:
-    print(hero_lvlnext - hero_xp, 'experience points until a level up!')
     print('Level:', hero_lvl)
     print('Exp:  ', hero_xp)
     print('Next: ', hero_lvlnext)
+
+elif hero_xp < hero_lvlnext:
+    print(hero_lvlnext - hero_xp, 'experience points until a level up!')
